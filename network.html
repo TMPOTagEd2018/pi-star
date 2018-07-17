@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Network</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Network</h1>
+						<br>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<h2>MQTT Protocol</h2>
+								<p>Multiple internet communication protocols were tested throughout to determine which would offer the best connection and security. Web Sockets and HTTP were initially used for testing purposes, but the project now utilizes the lightweight Message Queuing Telemetry Transport (MQTT) server. HTTP utilizes request and response, but MQTT utilizes publish and subscribe. This suits PISTAR better because the MQTT-broker publishes information for the client whenever new data is available. The Eclipse Paho library is able to offer implementation of the MQTT connection conveniently.
+                                </p>
+								
+                                <h2>Sensor Nodes</h2>
+                                <p>After multiple attempts at using NodeMCU modules, a compromise that involves utilizing both the Arduino and Raspberry Pis was achieved. Each node consists of one Raspberry Pi and one Arduino UNO. The Arduino UNO is connected to the Raspberry Pi by the I2C Bus and receives sensor data, subsequently sending it to the Raspberry Pi in a useful form. Once the Raspberry Pi received the data, it then sends it across the network using secured MQTT connections to the main server to calculate threat levels. The sensors are contained in three independent nodes. The Room Node detects ambient changes in the room with both a passive infrared sensor (PIR) and a lux sensor. The Door Node detects interaction and movement of the door of the room with both a contact sensor and an inertial measurement unit (IMU). Finally, the Box Node detects direct tampering with the secure box in the room and includes an accelerometer and a contact sensor.
+                                </p>
+                                <h2>Gateway Node</h2>
+								<p>The hub for the IoT network is a Raspberry Pi 3 operating as an internet access point/gateway for wireless communication with the sensors, offering internet access via GTRI ethernet. This access point allows communication with the Raspberry Pi via SSH from any nearby computer with the correct password. The presence of the Gateway Node classifies the network as Star because the access point Raspberry Pi is the only device connected to the internet. The independent nodes themselves are not connected to the internet directly or to each other. All sensor data is sent from the independent nodes to the Gateway Node and then displayed on the internet.
+                                </p>
+                            </section>
+                            <ul class="actions special">
+                                <li><a href="index.html#network" class="button primary">Return</a></li>
+                                
+                            </ul>    
+                            <br>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!-- <section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Etiam feugiat</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section> -->
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
