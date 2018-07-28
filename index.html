@@ -3,13 +3,14 @@
 <html>
 	<head>
 		<title>pi-star</title>
-		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -46,66 +47,68 @@
 										<header class="major">
 											<h1>Project Overview</h1>
 										</header>
-										<p>Protected IoT Security & Threat Analysis/Response (PI-STAR) is an IoT-based security system designed to provide wireless security to a room.  It uses a variety of sensor modules to determine the threat level and probability of a compromising incident within a room. Additionally, the system uses advanced security to protect the system against both cyber and physical attacks. Finally, the system is able to display real-time attack and threat level information on a web interface as well as respond to possible attacks.</p>
-										<p>PI-STAR was created as part of an internship at the Georgia Tech Research Institute CIPHER-TMPO Lab.</p>
+										<p>The Protected IoT Security and Threat Analysis/Response (PI-STAR) is an IoT-based security system designed to provide wireless security to a room with confidential information. It uses a variety of sensor modules to determine the threat level and probability of a compromising incident within a room. The system then displays real-time attack and threat level information on a web interface for continuous monitoring. Additionally, the system uses advanced security to protect against both cyber and physical attacks. Finally, the system is able to respond to critical threats by triggering an alarm and encrypting sensitive information on an external medium.</p>
+										<p>The system consists of sensor modules throughout the room and within the box node containing the sensitive information.</p>
+										<p>PI-STAR was created by Ibiyemi Abiodun, Simon Abrelat, Sidhesh Desai, and Grace Pfohl as part of an internship at the Georgia Tech Research Institute CIPHER-TMPO Lab.</p>
+										<img src="images/Diagram2.png" width="100%" align:"center"/>
 									</div>
 									
 								</div>
 							</section>
-							<section id="network" class="main">
+							<section id="network" class="main special">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
 											<h2>Network</h2>
 										</header>
-										<img src="images/Progression.png" align="middle" width="100%" />
-										<p>The IoT network is based on a star structure with each of the sensor modules communicating with a mother node via MQTT. In general, the sensor data is transferred from the sensors, to the Arduino UNOs, to the Raspberry Pis, which are the basis for the IoT connections.</p>
-										<ul class="actions special">
+										
+										<p align="justify">The IoT network is based on a star structure with each of the sensor modules communicating with a mother node via MQTT. In general, the sensor data is transferred from the sensors, to the Arduino UNOs, to the Raspberry Pis, which are the basis for the IoT connections.</p>
+										
 											<a href="network.html" class="button primary" >Learn More</a>
-										</ul>
+										
 										
 									</div>
 									
 								</div>
 							</section>
-							<section id="threat" class="main">
+							<section id="threat" class="main special">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
 											<h2>Threat Analysis</h2>
 										</header>
-										<p>PI-STAR uses mathematical algorithms to determine the threat levels based on the sensor data.</p>
-										<ul class="actions special">
+										<p align="justify">PI-STAR uses mathematical algorithms to determine the threat levels based on the sensor data.</p>
+										
 											<a href="threat.html" class="button primary" >Learn More</a>
-										</ul>
+										
 									</div>
 									
 								</div>
 							</section>
-							<section id="security" class="main">
+							<section id="security" class="main special">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
 											<h2>Security</h2>
 										</header>
-										<p>PI-STAR utilizes three types of security to protect the security system against a wide range of attacks. This includes cyber attacks as well as certain physical attacks. Overall, this security is designed to ensure that the security system of the room is never compromised by an attacker.</p>
-										<ul class="actions special">
+										<p align="justify">PI-STAR utilizes three types of security to protect the security system against a wide range of attacks. This includes cyber attacks as well as certain physical attacks. Overall, this security is designed to ensure that the security system of the room is never compromised by an attacker.</p>
+										
 											<a href="security.html" class="button primary" >Learn More</a>
-										</ul>
+										
 									</div>
 									
 								</div>
 							</section>
-							<section id="data" class="main">
+							<section id="data" class="main special">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
 											<h2>Data Handling</h2>
 										</header>
-										<p>The room sensor data arrives at the gateway node after multiple transfers between devices and is populated into an SQLite database and used to determine the threat level of the room algorithmically. Meanwhile, the most recent sensor readings are displayed to the user on a front end Python web application in a numerical format. The current and historic threat level is displayed graphically and the current threat level is also relayed in a summary statement.</p>
-										<ul class="actions special">
+										<p align="justify">The room sensor data arrives at the gateway node after multiple transfers between devices and is populated into an SQLite database and used to determine the threat level of the room algorithmically. Meanwhile, the most recent sensor readings are displayed to the user on a front end Python web application in a numerical format. The current and historic threat level is displayed graphically and the current threat level is also relayed in a summary statement.</p>
+										
 											<a href="data.html" class="button primary" >Learn More</a>
-										</ul>
+										
 									</div>
 									
 								</div>
@@ -120,12 +123,14 @@
 									<h2>View Our GitHub Page</h2>
 									
 								</header>
+								
 								<footer class="major">
-									<ul class="actions special"> 
-										<a href="https://github.com/TMPOTagEd2018" class="button primary">View</a>
+									
+										<a href="https://github.com/TMPOTagEd2018" class="button primary">  View  </a>
 										
-									</ul>
+									
 								</footer>
+								<br>
 							</section>
 
 					</div>
@@ -133,7 +138,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright" style="color:white"> An IoT Project by  Ibiyemi Abiodun, Simon Abrelat, Sidhesh Desai, and Grace Pfohl</a>.</p>
-						<p class="copyright"> &copy; skiidk. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; skiidk. Design based on Stellar by <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
