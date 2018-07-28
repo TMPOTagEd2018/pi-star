@@ -3,11 +3,33 @@
 <html>
 	<head>
 		<title>Network</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<style>
+	#rounded{
+		border-radius: 2%;
+	}
+	#rounded:hover{
+		color: #424242; 
+		-webkit-transition: all .3s ease-in;
+		-moz-transition: all .3s ease-in;
+		-ms-transition: all .3s ease-in;
+		-o-transition: all .3s ease-in;
+		transition: all .3s ease-in; 
+		opacity: 1;
+		transform: scale(1.2);
+		-ms-transform: scale(1.2); 
+		-webkit-transform: scale(1.2);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	}
+	
+	</style>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -23,15 +45,65 @@
 					<div id="main">
 
 						<!-- Content -->
+										
+												  
+							  
+								
 							<section id="content" class="main">
-								<!-- <span class="image main"><img src="images/pic04.jpg" alt="" /></span> -->
+                                 <!-- <span class="image main"><img src="images/Progression2.png" height="25%" width="25%" object-fit=alt="" /></span> -->
+								 <!-- <div style="width: 100px; height: 100px; background-image: url("images/network.png"); background-repeat: no-repeat;"></div> -->
+								 <img src="images/Progression2.png" align="middle" width="100%" />
+								 <br>
+								 
+								 <hr>
 								<h2>MQTT Protocol</h2>
 								<p>Multiple internet communication protocols were tested throughout to determine which would offer the best connection and security. Web Sockets and HTTP were initially used for testing purposes, but the project now utilizes the lightweight Message Queuing Telemetry Transport (MQTT) server. HTTP utilizes request and response, but MQTT utilizes publish and subscribe. This suits PISTAR better because the MQTT-broker publishes information for the client whenever new data is available. The Eclipse Paho library is able to offer implementation of the MQTT connection conveniently.
                                 </p>
-								
+								<hr />
                                 <h2>Sensor Nodes</h2>
                                 <p>After multiple attempts at using NodeMCU modules, a compromise that involves utilizing both the Arduino and Raspberry Pis was achieved. Each node consists of one Raspberry Pi and one Arduino UNO. The Arduino UNO is connected to the Raspberry Pi by the I2C Bus and receives sensor data, subsequently sending it to the Raspberry Pi in a useful form. Once the Raspberry Pi received the data, it then sends it across the network using secured MQTT connections to the main server to calculate threat levels. The sensors are contained in three independent nodes. The Room Node detects ambient changes in the room with both a passive infrared sensor (PIR) and a lux sensor. The Door Node detects interaction and movement of the door of the room with both a contact sensor and an inertial measurement unit (IMU). Finally, the Box Node detects direct tampering with the secure box in the room and includes an accelerometer and a contact sensor.
                                 </p>
+                                <img src="images/nodes.png"  width="500px"/>
+								<br>
+								<hr />
+
+								<h2>Sensor Node Pictures</h2>
+								<div class="row">
+										<div class="col-4 col-12-medium">
+											<h3>Door Node</h3>
+											<img id="rounded"  src="images/DoorNodeWide.JPG"  width="100%"/>	 
+											<img id="rounded"  src="images/DoorNodeCloseup.JPG"  width="100%"/>
+												
+												
+
+
+										</div>
+										<div class="col-4 col-12-medium">
+											<h3>Box Node</h3>
+											<img id="rounded"  src="images/BoxNodeOutside.JPG"  width="100%"/>
+											<img id="rounded"  src="images/BoxNodeSide.JPG"  width="100%"/>
+										
+											<img id="rounded"  src="images/BoxNodeInside.JPG"  width="100%"/>
+											<img id="rounded"  src="images/BoxNodeInsideCloseup.JPG"  width="100%"/>
+											
+												
+										</div>
+
+										<div class="col-4 col-12-medium">
+											<h3>Room Node</h3>
+											<img id="rounded"  src="images/RoomNodeFront.JPG"  width="100%"/>
+											<img id="rounded"  src="images/RoomNodeDiag.JPG"  width="100%"/>
+											<img id="rounded"  src="images/RoomNodeSide.JPG"  width="100%"/>
+												
+										</div>
+
+
+
+
+								</div>
+                                <hr />
+                                
+                                
                                 <h2>Gateway Node</h2>
 								<p>The hub for the IoT network is a Raspberry Pi 3 operating as an internet access point/gateway for wireless communication with the sensors, offering internet access via GTRI ethernet. This access point allows communication with the Raspberry Pi via SSH from any nearby computer with the correct password. The presence of the Gateway Node classifies the network as Star because the access point Raspberry Pi is the only device connected to the internet. The independent nodes themselves are not connected to the internet directly or to each other. All sensor data is sent from the independent nodes to the Gateway Node and then displayed on the internet.
                                 </p>
@@ -47,7 +119,7 @@
 				<!-- Footer -->
 					<footer id="footer">
                         <p class="copyright" style="color:white"> An IoT Project by  Ibiyemi Abiodun, Simon Abrelat, Sidhesh Desai, and Grace Pfohl</a>.</p>
-						<p class="copyright">&copy; skiidk. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; skiidk. Design based on Stellar by <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
@@ -60,6 +132,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
 
 	</body>
 </html>
