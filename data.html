@@ -3,7 +3,8 @@
 <html>
 	<head>
         <title>Data Handling</title>
-        
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -29,8 +30,15 @@
                                 <h2>Data Management</h2>
                                 
                                 <p>SQLite was chosen as our database management system due to its simple implementation and serverless nature. Because SQLite is file-based, it is suitable for the needs of this project and is easy to share with the group for testing. It is easy to populate with sample data via a python program to test our network communication. SQLite was used with Chart.js on the Flask Front End to display threat data from the database in real time in an intuitive manner.</p>
+                                
                                 <p>Sample Sensor Data Table</p>
+                                <img src="images/SensorTable.png" align="middle" width="400px"/>
+                                <br>
+                                <br>
                                 <p>Sample Threats Table</p>
+                                <img src="images/ThreatTable.png" align="middle" width="400px"/>
+                                <br>
+                                <hr />
                                 <h2>Data Visualization/Front End</h2>
                                 <p>A web app for visualization of sensor data and threat level/analysis was created with Python and Flask. The app retrieves data from the SQLite database tables and displays it to the user. Further visualization is evident in a live-updating graph of the threat level and a statement relaying the current threat level to the user. The graphing is using the Chart JS Library. Further security of the web app includes user login and hashing/salting of passwords. 
                                 </p>
@@ -46,7 +54,7 @@
 				<!-- Footer -->
 					<footer id="footer">
                         <p class="copyright" style="color:white"> An IoT Project by  Ibiyemi Abiodun, Simon Abrelat, Sidhesh Desai, and Grace Pfohl</a>.</p>
-						<p class="copyright">&copy; skiidk. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; skiidk. Design based on Stellar by <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
